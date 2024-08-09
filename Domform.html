@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DomFormExample</title>
+</head>
+<body>
+  
+       <select name="" id="country_select">
+        <option value="India">India</option>
+        <option value="United States Of America">United States Of America</option>
+        <option value="China">China</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Australia">Australia</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="South Africa">South Africa</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Canada">Canada</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Sweden">Sweden</option>
+       </select>
+       <button id="find_continent_btn">find continent</button>
+    
+</body>  
+</html>
+
+<script>
+    document.getElementById('find_continent_btn').addEventListener('click', function() {
+        var country = document.getElementById('country_select').value;
+        var continent = '';
+
+        switch(country) {
+            case 'India':
+            case 'China':
+            case 'Nepal':
+                continent = 'Asia';
+                break;
+            case 'United States of America':
+            case 'Canada':
+            case 'Mexico':
+                continent = 'North America';
+                break;
+            case 'Argentina':
+            case 'Brazil':
+                continent = 'South America';
+                break;
+            case 'Australia':
+                continent = 'Oceania';
+                break;
+            case 'France':
+            case 'Germany':
+            case 'Sweden':
+                continent = 'Europe';
+                break;
+            case 'South Africa':
+                continent = 'Africa';
+                break;
+            case 'Singapore':
+                continent = 'Asia';
+                break;
+            default:
+                continent = 'Unknown';
+        }
+
+        alert('The continent is ' + continent);
+    });
+</script>
